@@ -3,6 +3,9 @@ import "./navbar.scss"
 
 
 const NavBar = () => {
+
+    const categories = ["Urbanas" , "Deportivas" , "Skater"]
+
     return(
         <nav className="navbar">
             <div className="brand">
@@ -11,9 +14,12 @@ const NavBar = () => {
             </div>
 
             <ul className="categories">
-                <li>Urbana</li>
-                <li>Deportivas</li>
-                <li>Skate</li>
+            {
+                categories.map((category) => {
+                    return <li>{category}</li>
+
+                })
+            }
             </ul>
 
             <CartWidget/>
